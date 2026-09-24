@@ -1,0 +1,361 @@
+Q1.   What is Java?
+Ans. Java is a high-level, object-oriented, platform-independent programming language used to develop different types of applications such as web, desktop, and enterprise applications.
+
+
+
+Q2.   Why is Java platform-independent?
+Ans. Java is platform-independent because the Java compiler converts source code into bytecode, and the same bytecode can run on any operating system that has a compatible JVM.
+
+
+
+Q3. What is JVM?
+Ans. JVM (Java Virtual Machine) is a runtime environment that executes Java bytecode. It allows the same Java bytecode to run on different operating systems.
+
+
+
+Q4. What is JDK?
+Ans. JDK (Java Development Kit) is a software development kit used to develop Java applications. It contains tools like the Java compiler (javac), JVM, and other development tools.
+
+
+
+Q5. What is JRE?
+Ans. JRE (Java Runtime Environment) provides the environment required to run Java applications. It contains the JVM and Java libraries needed for execution.
+
+
+
+Q6. What is the difference between JDK, JRE, and JVM?
+Ans.  JDK is used to develop Java applications and contains development tools like javac.
+JRE provides the environment required to run Java applications.
+a executes Java bytecode and enables Java's platform independence.
+
+
+
+Q7. Is Java 100% object-oriented? Why or why not?
+Ans. Java is not a pure object-oriented language because it supports primitive data types like int, char, and boolean, which are not objects. It also supports static members that can be accessed without creating an object.
+
+
+
+Q8. What are the 4 main pillars of OOP in Java?
+Ans. 1.Abstraction
+     2.Encapsulation
+     3.Inheritance
+     4.Polymorphism
+
+
+
+Q9. What is the difference between == and .equals() in Java?
+Ans.
+    == compares primitive values or object references, while
+    .equals() is used to compare the logical/content equality of objects, depending on how equals() is implemented.
+
+            String a = new String("Java");
+            String b = new String("Java");
+
+            System.out.println(a == b);       // false
+            System.out.println(a.equals(b));  // true
+
+
+    
+Q10. What is the difference between method overloading and method overriding?
+Ans. Method Overloading:  Same method name with different parameters in the same class. It is compile-time polymorphism.
+
+Method Overriding:   A child class provides its own implementation of a method inherited from the parent class. It is runtime polymorphism.
+
+            class Calculator {
+            
+                // Overloading
+                int add(int a, int b) {
+                    return a + b;
+                }
+
+                int add(int a, int b, int c) {
+                    return a + b + c;
+                }
+            }
+
+            class Animal {
+                void sound() {
+                    System.out.println("Animal sound");
+                }
+            }
+
+            class Dog extends Animal {
+            
+                // Overriding
+                @Override
+                void sound() {
+                    System.out.println("Dog barks");
+                }
+            }
+
+
+
+Q11. Can we overload the main() method in Java?
+Ans. Yes, we can overload the main() method in Java by changing its parameters.
+
+        class Test {                  
+               public static void main(String[] args) {
+                   System.out.println("Main method");
+               }
+               public static void main(int x) {
+                   System.out.println("Overloaded main");
+               }
+        }
+
+
+    
+Q12. Can we override a static method in Java?
+Ans. No, static methods cannot be overridden in Java because they belong to the class, not to the object.
+
+If a child class defines a static method with the same signature, it is called method hiding, not overriding.
+
+    //class Parent {
+    //    static void show() {
+    //        System.out.println("Parent");
+    //    }
+    //}
+    //class Child extends Parent {
+    //    static void show() {
+    //        System.out.println("Child");
+    //    }
+    //}
+
+
+
+Q13. Can we override a final method in Java?
+Ans. A final method cannot be overridden because final prevents the method's implementation from being changed by subclasses.
+
+
+    //class Parent {
+    //    final void show() {
+    //        System.out.println("Parent");
+    //    }
+    //}
+    //
+    //class Child extends Parent {
+    //    // ❌ Cannot override final method
+    //    void show() {
+    //        System.out.println("Child");
+    //    }
+    //}
+
+
+
+Q14. What is a constructor in Java?
+Ans. A constructor is a special member of a class that is automatically called when an object is created. It is mainly used to initialize the object's data.
+
+    //class Student {
+    //    String name;
+    //
+    //    Student() {
+    //        name = "Mickey";
+    //    }
+    //}
+    //
+    //Student s = new Student();  // Constructor is called
+
+
+
+Q15. Can a constructor be static, final, or abstract?
+Ans. NO,NO,NO.
+
+
+
+Q16. Can a constructor be overloaded in Java?
+Ans. Constructor overloading means having multiple constructors in the same class with different parameter lists.
+
+Fact: Constructors can be overloaded, but constructors cannot be overridden.
+
+    //class Student {
+    //
+    //    Student() {
+    //        System.out.println("Default");
+    //    }
+    //
+    //    Student(String name) {
+    //        System.out.println(name);
+    //    }
+    //
+    //    Student(String name, int age) {
+    //        System.out.println(name + " " + age);
+    //    }
+    //}
+
+
+
+Q17. What is the difference between this and super keyword in Java?
+Ans. this refers to the current object of the current class.
+
+super refers to the immediate parent class object/member and is used to access parent class variables, methods, and constructors.
+
+    //class Parent {
+    //    int x = 10;
+    //}
+    //
+    //class Child extends Parent {
+    //    int x = 20;
+    //
+    //    void show() {
+    //        System.out.println(this.x);  // 20 → current class
+    //        System.out.println(super.x); // 10 → parent class
+    //    }
+    //}
+
+
+
+Q18. What is the difference between ArrayList and LinkedList in Java?
+Ans. ArrayList uses a dynamic array internally, so it provides fast random access using an index.
+LinkedList uses linked nodes, where each node stores references to the previous and next node.
+
+
+
+Q19. What is the difference between Array and ArrayList in Java?
+Ans. An array has a fixed size, which is defined when it is created, while an
+ArrayList has a dynamic size and can grow or shrink as elements are added or removed. An array can store primitives and objects, whereas ArrayList stores objects (primitive values use wrapper classes such as Integer).
+
+    //int[] arr = new int[5];       // fixed size
+    
+    //ArrayList<Integer> list = new ArrayList<>();
+    //list.add(10);
+    //list.add(20);                 // size can grow
+
+
+
+Q20. What is the difference between String, StringBuilder, and StringBuffer?
+Ans. String is an immutable class in Java used to represent a sequence of characters.
+
+    //String name = "Java";
+
+StringBuilder is a mutable class used to create and modify a sequence of characters. It is generally faster than StringBuffer but is not thread-safe.
+
+    //StringBuilder sb = new StringBuilder("Java");
+    //sb.append(" Programming");
+    //System.out.println(sb); // Java Programming
+
+StringBuffer is a mutable and thread-safe class used to modify a sequence of characters. It is generally slower than StringBuilder because its methods are synchronized.
+
+    //StringBuffer sb = new StringBuffer("Java");
+    //sb.append(" Programming");
+    //System.out.println(sb); // Java Programming
+    
+String        → Immutable
+StringBuilder → Mutable + Not Thread-safe + Faster
+StringBuffer  → Mutable + Thread-safe + Synchronized
+
+
+
+Q21. Why is String immutable in Java?
+Ans. String is immutable because once a String object is created, its value cannot be changed. Any modification creates a new String object. This provides security, thread safety, and allows efficient use of the String Pool.
+
+    //String s = "Java";
+    //s = s + " Programming";
+
+
+
+Q22. What is the String Pool in Java?
+Ans. String Constant Pool is a special area associated with the Java heap where Java stores and reuses String literals to avoid creating duplicate String objects.
+
+    //String a = "Java";
+    //String b = "Java";
+
+
+
+Q23. What is the difference between String s = "Java" and String s = new String("Java")?
+Ans. | `String s = "Java"`                          | `String s = new String("Java")`             |
+| -------------------------------------------- | ------------------------------------------- |
+| Creates/uses a String in the **String Pool** | Creates a **new String object in the heap** |
+| Reuses existing `"Java"` if present          | Creates a new object each time              |
+| More memory efficient                        | Less memory efficient                       |
+
+
+
+Q24. What is garbage collection in Java?
+Ans. Garbage Collection (GC) is the automatic process of identifying and removing unused/unreachable objects from heap memory.
+
+    //Student s = new Student();
+    //s = null;
+
+
+
+Q25. What is the difference between Stack memory and Heap memory in Java?
+Ans. Stack memory stores method execution data and local variables, while heap memory stores objects created using new. Stack follows LIFO, whereas heap does not follow LIFO.
+
+
+
+Q26. What is the difference between throw and throws in Java?
+Ans. | `throw`                                 | `throws`                                                 |
+| --------------------------------------- | -------------------------------------------------------- |
+| Used to **actually throw an exception** | Used to **declare that a method may throw an exception** |
+| Used inside the method                  | Used in the method declaration                           |
+| Throws **one exception at a time**      | Can declare **multiple exceptions**                      |
+
+    // // throw
+    // void checkAge(int age) {
+    //     if (age < 18) {
+    //         throw new ArithmeticException("Not eligible");
+    //     }
+    // }
+    // // throws
+    // void readFile() throws IOException {
+    //     // code
+    // }
+
+
+
+Q27. What is an exception in Java?
+Ans. An exception is an unexpected problem that occurs during program execution and can be handled by the program
+
+    //int a = 10 / 0;
+
+
+
+Q28. What is the difference between checked and unchecked exceptions?
+Ans. Checked exception: Compiler checks it, so you must handle it or declare it using throws.
+
+Unchecked exception: Compiler does not force you to handle or declare it.
+        Checked:
+                IOException
+                SQLException
+                FileNotFoundException
+
+        Unchecked:
+                ArithmeticException
+                NullPointerException
+                ArrayIndexOutOfBoundsException
+
+
+
+Q29. What is the difference between final, finally, and finalize()?
+Ans. final is a keyword used to prevent changes.
+        final int x = 10;
+
+        final variable → value cannot be changed
+        final method → cannot be overridden
+        final class → cannot be inherite
+
+    finally is a block that normally executes after try/catch, whether an exception occurs or not.
+        try {
+            int x = 10 / 0;
+        } catch (Exception e) {
+            System.out.println("Error");
+        } finally {
+            System.out.println("Always executes");
+        }
+
+    finalize() was a method that could be called by the garbage collector before an object was reclaimed, but it is deprecated and should not be used in modern Java.
+
+        final     → keyword → prevent change
+        finally   → block   → cleanup code
+        finalize  → method  → deprecated
+
+
+
+Q30. Can we create an object of an abstract class?
+Ans. No, we cannot create an object directly of an abstract class because an abstract class can contain abstract methods that don't have an implementation.
+
+    //abstract class Animal {
+    //    abstract void sound();
+    //}
+    //
+    //// ❌ Not allowed
+    //Animal a = new Animal();

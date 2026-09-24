@@ -1,0 +1,366 @@
+Q1. What is JavaScript?
+Ans.JavaScript is a scripting language used to make web pages dynamic and interactive.
+
+
+
+Q2. Is JavaScript a compiled language or an interpreted language?
+Ans. JavaScript is an interpreted language, but modern JavaScript engines also use JIT (Just-In-Time) compilation to improve performance.
+
+
+
+Q3. What is the difference between var, let, and const in JavaScript?
+Ans. var can be redeclared and reassigned. let cannot be redeclared in the same scope but can be reassigned. const cannot be redeclared or reassigned.
+
+
+
+Q4. What is the difference between == and === in JavaScript?
+Ans. == compares values and can perform type conversion, while === compares both value and data type without type conversion.
+
+
+
+Q5. What are the different data types in JavaScript?
+Ans. Primitive data types:
+
+                String
+                Number
+                BigInt
+                Boolean
+                Undefined
+                Null
+                Symbol
+
+    Non-primitive:
+
+        Object — includes arrays, functions, and objects
+
+
+
+Q6. What is the difference between null and undefined in JavaScript?
+Ans. undefined → A variable has been declared, but no value has been assigned.
+null → We intentionally assign no value to a variable.
+
+
+
+Q7. What is hoisting in JavaScript?
+Ans. Hoisting means JavaScript moves declarations to the top of their scope during the execution phase.
+
+    // console.log(a);
+    // var a = 10;
+
+
+
+Q8. What is a function in JavaScript?
+Ans. A function is a reusable block of code that performs a specific task and can be executed by calling its name.
+
+    // function greet() {
+    //     console.log("Hello");
+    // }
+    // 
+    // greet(); // calling the function
+
+
+
+Q9. What is the difference between a function declaration and a function expression in JavaScript?
+Ans. A function declaration directly defines a function, while a function expression assigns a function to a variable.
+
+    // //function declaration
+    // function add() {
+    //     return 2 + 3;
+    // }
+    // //Function Expression:
+    // const add = function() {
+    //     return 2 + 3;
+    // };
+
+
+
+Q10. Can a function declaration be called before it is defined in JavaScript?
+Ans. Yes, a function declaration can be called before it is defined because function declarations are hoisted. 
+
+    // greet();
+    // 
+    // function greet() {
+    //     console.log("Hello");
+    // }
+
+
+
+Q11. What is an arrow function in JavaScript?
+Ans. An arrow function is a shorter way to write a function using =>.
+
+    // const add = (a, b) => a + b;
+
+
+
+Q12. What is the difference between map() and forEach() in JavaScript?
+Ans. forEach() is used to perform an operation on each array element,
+map() performs an operation and returns a new array.
+
+    // *forEach
+    // let nums = [1, 2, 3];
+    // nums.forEach(n => console.log(n));
+
+    // *map
+    // let nums = [1, 2, 3];
+    // let result = nums.map(n => n * 2); 
+    // console.log(result); // [2, 4, 6]
+
+
+
+Q13. What is the difference between push() and pop() in JavaScript arrays?
+Ans. push() adds an element to the end of an array, 
+ pop() removes the last element from an array.
+
+    // let arr = [10, 20];
+    // arr.push(30); // [10, 20, 30]
+    // arr.pop();    // [10, 20]
+
+
+
+Q14. What is the difference between shift() and unshift() in JavaScript?
+Ans. shift() removes the first element of an array, 
+unshift() adds an element to the beginning of an array.
+
+    // let arr = [10, 20, 30];
+    // arr.shift();       // [20, 30]
+    // arr.unshift(5);    // [5, 20, 30]
+
+
+
+Q15. What is the difference between slice() and splice() in JavaScript?
+Ans. slice() returns a portion of an array without changing the original array,
+splice() can add, remove, or replace elements and changes the original array.
+
+    // let arr = [10, 20, 30, 40];
+    // console.log(arr.slice(1, 3));
+    // // [20, 30]
+    // arr.splice(1, 2);
+    // // removes 20, 30
+    // console.log(arr);
+    // // [10, 40]
+
+
+
+Q16. What is the difference between find() and filter() in JavaScript?
+Ans. find() → returns the first element that satisfies the condition.
+filter() → returns all elements that satisfy the condition in a new array.
+
+    // let nums = [10, 20, 30, 40];
+    // let a = nums.find(n => n > 20);
+    // console.log(a); // 30
+    // let b = nums.filter(n => n > 20);
+    // console.log(b); // [30, 40]
+
+
+
+Q17. What is a callback function in JavaScript?
+Ans. A callback function is a function passed as an argument to another function, which is then called later.
+
+    // function greet(name, callback) {
+    //     console.log("Hello " + name);
+    //     callback();
+    // }
+    // function message() {
+    //     console.log("Welcome!");
+    // }
+    // greet("Mickey", message);
+
+
+
+Q18. What is a closure in JavaScript?
+Ans. A closure happens when an inner function remembers and can access variables from its outer function, even after the outer function has finished.
+
+    // function outer() {
+    //     let name = "Mickey";
+    //     function inner() {
+    //         console.log(name);
+    //     }
+    //     return inner;
+    // }
+    // let result = outer();
+    // result(); // Mickey1
+
+
+    
+Q19.
+Ans. 
+Q20.
+Ans. 
+Q21.
+Ans. 
+Q22.
+Ans. 
+Q23.
+Ans. 
+Q24.
+Ans. 
+Q25.
+Ans. 
+Q26.
+Ans. 
+Q27.
+Ans. 
+Q28.
+Ans. 
+Q29.
+Ans. 
+Q30.
+Ans. 
+Q31.
+Ans. 
+Q32.
+Ans. 
+Q33.
+Ans. 
+Q34.
+Ans. 
+Q35.
+Ans. 
+Q36.
+Ans. 
+Q37.
+Ans. 
+Q38.
+Ans. 
+Q39.
+Ans. 
+Q40.
+Ans. 
+Q41.
+Ans. 
+Q42.
+Ans. 
+Q43.
+Ans. 
+Q44.
+Ans. 
+Q45.
+Ans. 
+Q46.
+Ans. 
+Q47.
+Ans. 
+Q48.
+Ans. 
+Q49.
+Ans. 
+Q50.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
+Q1.
+Ans. 
