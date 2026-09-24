@@ -181,11 +181,35 @@ Ans. A closure happens when an inner function remembers and can access variables
     // result(); // Mickey1
 
 
-    
-Q19.
-Ans. 
-Q20.
-Ans. 
+
+Q19. What is the difference between local scope and global scope in JavaScript?
+Ans. Local scope means a variable can be accessed only within its defined scope, while a global variable is declared in the global scope and can generally be accessed throughout the program.
+
+    // let x = 10; // global
+    // function test() {
+    //     let y = 20; // local
+    //     console.log(x); // ✅
+    //     console.log(y); // ✅
+    // }
+    // test();
+    // console.log(x); // ✅
+    // console.log(y); // ❌
+
+
+
+Q20. What is the this keyword in JavaScript?
+Ans. this refers to the object/context that is currently calling or executing the function. Its value depends on how the function is called.
+
+    // const user = {
+    //     name: "Mickey",
+    //     showName() {
+    //         console.log(this.name);
+    //     }
+    // }; 
+    // user.showName(); // Mickey
+
+
+
 Q21.
 Ans. 
 Q22.
