@@ -210,30 +210,129 @@ Ans. this refers to the object/context that is currently calling or executing th
 
 
 
-Q21.
-Ans. 
-Q22.
-Ans. 
-Q23.
-Ans. 
-Q24.
-Ans. 
-Q25.
-Ans. 
-Q26.
-Ans. 
-Q27.
-Ans. 
-Q28.
-Ans. 
-Q29.
-Ans. 
-Q30.
-Ans. 
-Q31.
-Ans. 
-Q32.
-Ans. 
+Q21. What is the difference between call(), apply(), and bind() in JavaScript?
+Ans. call() → calls the function immediately and passes arguments separately.
+apply() → calls the function immediately and passes arguments as an array.
+bind() → does not call immediately; it returns a new function with this fixed.
+
+    //  function greet(city) {
+    //  console.log(this.name, city);
+    //  }
+    //  let user = { name: "Mickey" };
+    //  greet.call(user, "Delhi");
+    //  greet.apply(user, ["Delhi"]);
+    //  let newFunc = greet.bind(user, "Delhi");
+    //  newFunc();
+
+    call → immediately + separate arguments
+    apply → immediately + array arguments
+    bind → returns a new function
+
+
+
+Q22. What is the difference between synchronous and asynchronous JavaScript?
+Ans. Synchronous: JavaScript executes tasks one by one and waits for the current task to finish before moving to the next task.
+
+Asynchronous: JavaScript can start a time-consuming task and continue executing the next task without waiting for it to finish.
+
+    // console.log("1");
+    // setTimeout(() => {
+    //     console.log("2");
+    // }, 2000);
+    // console.log("3");
+
+
+
+Q23. What is the event loop in JavaScript?
+Ans. JavaScript is mainly single-threaded, so the event loop checks whether the call stack is empty and then moves waiting callbacks/tasks to the stack for execution.
+
+    Call Stack → Web APIs → Queue → Event Loop → Call Stack
+
+
+
+Q24. What is a Promise in JavaScript?
+Ans. A Promise is a JavaScript object that links producing code with consuming code and represents the eventual completion or failure of an asynchronous operation.
+
+    // let promise = new Promise((resolve, reject) => {
+    //     resolve("Success");
+    // });
+
+
+
+Q25. What are the three states of a Promise in JavaScript?
+Ans. Pending → Promise is still running.
+     Fulfilled → Promise completed successfully.
+     Rejected → Promise failed.
+    // 
+    // let promise = new Promise((resolve, reject) => {
+    //     resolve("Success");
+    // });
+
+
+
+Q26. What is the difference between async and await in JavaScript?
+Ans. async makes a function return a Promise, while await pauses the execution of that async function until a Promise is settled.
+
+    // async function getData() {
+    //     let result = await fetch("https://example.com");
+    //     console.log(result);
+    // }
+
+
+
+Q27. What is the difference between setTimeout() and setInterval() in JavaScript?
+Ans. setTimeout() executes a function once after a delay, while setInterval() repeatedly executes a function at a specified interval.
+
+    // setTimeout(() => {
+    //     console.log("Hello");
+    // }, 2000); // runs once after 2 seconds
+    // setInterval(() => {
+    //     console.log("Hello");
+    // }, 2000); // runs every 2 seconds
+
+
+
+Q28. What is the difference between localStorage and sessionStorage in JavaScript?
+Ans. localStorage stores data permanently until it is manually removed, while sessionStorage stores data only for the current browser session/tab.
+
+    // localStorage.setItem("name", "Mickey");
+    // sessionStorage.setItem("name", "Mickey");
+
+
+Q29. What is DOM in JavaScript?
+Ans. DOM stands for Document Object Model. It represents an HTML document as objects, allowing JavaScript to access and manipulate HTML elements.
+
+    // document.getElementById("title").innerText = "Hello";
+
+
+
+Q30. What is the difference between getElementById() and querySelector()?
+Ans. getElementById() selects an element by its ID, while 
+querySelector() selects the first element that matches a CSS selector.
+
+    // document.getElementById("title");
+    // document.querySelector("#title");  // ID
+    // document.querySelector(".box");    // class
+    // document.querySelector("p");       // first <p>
+
+
+
+Q31. What is event bubbling in JavaScript?
+Ans. Event bubbling means when an event happens on a child element, the event also travels upward to its parent elements.
+
+    // <div id="parent">
+    //     <button id="child">Click</button>
+    // </div>
+
+
+
+Q32. What is event capturing in JavaScript?
+Ans. Event capturing is the process where an event travels from the outermost parent element down to the target element.
+
+    // parent.addEventListener("click", handler, true);
+
+
+    
 Q33.
 Ans. 
 Q34.
