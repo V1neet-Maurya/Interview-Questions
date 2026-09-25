@@ -359,3 +359,282 @@ Ans. No, we cannot create an object directly of an abstract class because an abs
     //
     //// ❌ Not allowed
     //Animal a = new Animal();
+
+
+
+Q31. Can an abstract class have a constructor?
+Ans. Yes, an abstract class can have a constructor. The constructor is called when an object of a child class is created.
+
+    // abstract class Animal {
+    //     Animal() {
+    //         System.out.println("Animal constructor");
+    //     }
+    // }
+    // class Dog extends Animal {
+    // }
+    // Dog d = new Dog();
+
+
+
+Q32. Can an interface have a constructor in Java?
+Ans. No, an interface cannot have a constructor because we cannot create an object directly from an interface.
+
+
+
+Q33. Can an interface have variables in Java?
+Ans. An interface can have variables, but they are automatically:
+
+public static final — meaning they are constants.
+
+    // interface Test {
+    //     int X = 10;
+    // }
+
+Java treats it as:
+    // 1public static final int X = 10;
+
+
+
+Q34. Can an interface have methods with a body?
+Ans. An interface can have methods with a body.
+
+The important types:
+default method → can have a body
+static method → can have a body
+private method → can have a body
+     
+    // interface Test {
+    // 
+    //     default void show() {
+    //         System.out.println("Hello");
+    //     }
+    // 
+    //     static void display() {
+    //         System.out.println("Static");
+    //     }
+    // }
+
+
+
+Q35. Can a Java class extend multiple classes?
+Ans. A Java class cannot extend multiple classes.
+But Java allows: A class can implement multiple interfaces. ✅
+    // class C implements A, B {
+        }
+
+
+
+Q36. Can a class implement multiple interfaces?
+Ans. Yes, a class can implement multiple interfaces in Java. This allows Java to achieve multiple inheritance through interfaces.
+
+    // interface A {
+    //     void showA();
+    // }
+    // 
+    // interface B {
+    //     void showB();
+    // }
+    // 
+    // class C implements A, B {
+    //     public void showA() {
+    //         System.out.println("A");
+    //     }
+    // 
+    //     public void showB() {
+    //         System.out.println("B");
+    //     }
+    // }
+
+
+
+Q37. What is the difference between extends and implements?
+Ans. extends is used when a class inherits from another class, or an interface inherits from another interface.
+
+implements is used when a class implements an interface.
+
+    // class Dog extends Animal {
+    //     // class → class
+    // }
+    // 
+    // class Dog implements AnimalInterface {
+    //     // class → interface
+    // }
+    // 
+    // interface B extends A {
+    //     // interface → interface
+    // }
+
+
+
+Q38. What is encapsulation in Java?
+Ans. Encapsulation means wrapping data (variables) and methods together inside a class and controlling access to the data using access modifiers.
+
+    // class Student {
+    //     private int age;
+    // 
+    //     public void setAge(int age) {
+    //         this.age = age;
+    //     }
+    // 
+    //     public int getAge() {
+    //         return age;
+    //     }
+    // }
+
+
+
+Q39. What is inheritance in Java?
+Ans. Inheritance is the mechanism by which a child class acquires the properties and methods of a parent class.
+
+    // class Animal {
+    //     void eat() {
+    //         System.out.println("Eating");
+    //     }
+    // }
+    // 
+    // class Dog extends Animal {
+    // }
+
+
+
+Q40. What is polymorphism in Java?
+Ans. Polymorphism means one thing having multiple forms.
+
+
+
+Q41. What is abstraction in Java?
+Ans. Abstraction means hiding the internal implementation and showing only the necessary details to the user.
+
+    // abstract class Vehicle {
+    //     abstract void start();
+    // }
+
+
+
+Q42. What is the difference between abstraction and encapsulation?
+Ans. Abstraction → Hides implementation details and shows only necessary information.
+
+Encapsulation → Wraps data and methods together inside a class and controls access to the data.
+
+    // class BankAccount {
+    //     private double balance;  // Data
+    // 
+    //     public void deposit(double amount) {  // Method
+    //         balance += amount;
+    //     }
+    // }
+
+
+
+Q43. What are the access modifiers in Java?
+Ans. public → accessible from anywhere
+     protected → accessible within the same package and subclasses
+     default → accessible within the same package
+     private → accessible only within the same class
+
+
+
+Q44. Which access modifier provides the highest level of access?
+Ans. public provides the highest level of access because it can be accessed from anywhere.
+
+
+
+Q45. Which access modifier provides the least access?
+Ans. private provides the least access. It can be accessed only within the same class.
+
+
+
+Q46. Can a private method be overridden in Java?
+Ans. No, a private method cannot be overridden because it is not accessible to the child class.
+
+
+
+Q47. Can a final class be inherited?
+Ans. No, a final class cannot be inherited because final prevents a class from being extended.
+
+    // final class A {
+    // }
+    // 
+    // // ❌ Not allowed
+    // class B extends A {
+    // }
+
+
+
+Q48. Can a final variable be changed after it is assigned?
+Ans. A final variable cannot be reassigned after it has been initialized.
+
+    // final int age = 20;
+    // 
+    // // age = 25;  ❌ Error
+
+
+
+Q49. What is method overloading?
+Ans. Method overloading means defining multiple methods with the same name but different parameters in the same class.
+
+    // void add(int a, int b) { }
+    // 
+    // void add(int a, int b, int c) { }
+    // 
+    // void add(double a, double b) { }
+
+
+
+Q50. What is method overriding?
+Ans. Method overriding means a child class provides its own implementation of a method already defined in the parent class.
+
+    // class Animal {
+    //     void sound() {
+    //         System.out.println("Animal sound");
+    //     }
+    // }
+    // 
+    // class Dog extends Animal {
+    //     @Override
+    //     void sound() {
+    //         System.out.println("Dog barks");
+    //     }
+    // }
+
+
+
+Q51. Is Java pass-by-value or pass-by-reference?
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
+Ans. 
