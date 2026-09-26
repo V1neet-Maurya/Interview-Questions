@@ -600,19 +600,139 @@ Ans. Method overriding means a child class provides its own implementation of a 
 
 
 Q51. Is Java pass-by-value or pass-by-reference?
+Ans. Java is always pass-by-value.
+
+
+
+Q52. What is the difference between == and .equals() for objects?
+Ans. == compares object references (whether they point to the same object), while .equals() compares the object's content/logical equality
+
+    // String a = new String("Java");
+    // String b = new String("Java");
+    // 
+    // a == b        // false
+    // a.equals(b)   // true
+
+
+
+Q52. What is the difference between HashMap and HashSet?
 Ans. 
+| HashMap                    | HashSet                         |
+| -------------------------- | ------------------------------- |
+| Stores **key-value pairs** | Stores **only values/elements** |
+| Uses `key → value`         | Uses only `value`               |
+| Keys must be unique        | Elements must be unique         |
+
+
+
+Q53. Can a HashMap have a null key?
+Ans. Yes, HashMap can have one null key. It can also have multiple null values.
+
+    // HashMap<Integer, String> map = new HashMap<>();
+    // map.put(null, "Vineet");  // ✅
+    // map.put(1, null);         // ✅
+    // map.put(2, null);         // ✅
+
+
+
+Q54. Can a HashSet contain duplicate elements?
+Ans. No, a HashSet cannot contain duplicate elements. It stores only unique elements.
+
+    // HashSet<Integer> set = new HashSet<>();
+    // set.add(10);
+    // set.add(10);
+    // set.add(20);
+    // System.out.println(set);
+
+
+
+Q55. Does HashSet maintain insertion order?
+Ans. No, HashSet does not guarantee insertion order.
+
+
+
+Q56. What is the difference between HashSet, LinkedHashSet, and TreeSet?
 Ans. 
+| Collection        | Main feature                                             |
+| ----------------- | -------------------------------------------------------- |
+| **HashSet**       | Stores unique elements, **no guaranteed order**          |
+| **LinkedHashSet** | Stores unique elements and **maintains insertion order** |
+| **TreeSet**       | Stores unique elements in **sorted order**               |
+
+    // HashSet<Integer> a = new HashSet<>();
+    // LinkedHashSet<Integer> b = new LinkedHashSet<>();
+    // TreeSet<Integer> c = new TreeSet<>();
+
+
+
+Q57. What is the difference between HashMap and Hashtable?
 Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
+| HashMap                                          | Hashtable                                  |
+| ------------------------------------------------ | ------------------------------------------ |
+| **Not synchronized**                             | **Synchronized**                           |
+| Faster generally                                 | Slower generally                           |
+| Allows **one null key** and multiple null values | Does **not allow null key or null values** |
+| Modern and commonly used                         | Older/legacy class                         |
+
+HashMap → faster + allows null
+Hashtable → synchronized + no null
+
+
+
+Q58. What is an Iterator in Java?
+Ans. Iterator is an object used to go through elements of a collection one by one.
+
+    // ArrayList<String> names = new ArrayList<>();
+    // names.add("Vineet");
+    // names.add("Rahul");
+    // names.add("Aman");
+    // Iterator<String> it = names.iterator();
+    // while (it.hasNext()) {
+    //     System.out.println(it.next());
+    // }
+
+
+
+Q59. What is the difference between Iterator and ListIterator?
+Ans.
+| Iterator                    | ListIterator                         |
+| --------------------------- | ------------------------------------ |
+| Can move **forward only**   | Can move **forward and backward**    |
+| Works with most collections | Works only with **List**             |
+| Can remove elements         | Can add, remove, and update elements |
+
+    // ListIterator<String> it = list.listIterator();
+    // while (it.hasNext()) {
+    //     System.out.println(it.next());
+    // }
+
+
+    // Iterator → Forward
+    // ListIterator → Forward + Backward
+
+
+
+Q60. What is the difference between Comparable and Comparator?
+Ans. Comparable: Used to define the default/natural sorting order of a class.
+
+Comparator: Used to define a custom sorting order, usually outside the class.
+
+
+
+Q61. What is serialization in Java?
+Ans. Serialization is the process of converting an object's data into a byte stream so it can be stored or transferred.
+
+Serialization → Object → Byte Stream
+Deserialization → Byte Stream → Object
+
+
+
+Q62. What is deserialization in Java?
+Ans. Deserialization is the process of converting a byte stream back into an object.
+
+
+
+Q63. What is the purpose of the transient keyword in Java?
 Ans. 
 Ans. 
 Ans. 
