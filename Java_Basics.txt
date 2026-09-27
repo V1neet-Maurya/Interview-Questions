@@ -1021,3 +1021,74 @@ Possible follow-up questions:
 
 Best preparation pattern:
 Definition -> Simple Example -> Difference -> Internal Working -> Interview Questions
+
+
+
+
+
+JAVA OVERLOADING AND OVERRIDING
+
+Java Entity            Overloading       Overriding
+------------------------------------------------------------
+Methods                Yes               Yes
+Constructors           Yes               No
+Static methods         Yes               No*
+Final methods          Yes               No
+Private methods        Yes               No
+Instance methods       Yes               Yes
+Abstract methods       Yes               Yes
+Main method            Yes               No*
+Variables / fields     No                No
+Static variables       No                No
+Instance variables     No                No
+Final variables        No                No
+Blocks                 No                No
+Static blocks          No                No
+Classes                No                No
+Interfaces             No                No
+Packages               No                No
+Enums                  No                No
+
+
+IMPORTANT NOTES:
+
+1. Static methods cannot be overridden.
+   They are hidden in the child class.
+
+2. The main() method can be overloaded because it is a method.
+   But it cannot be overridden because main() is static.
+
+3. Final methods can be overloaded but cannot be overridden.
+
+4. Private methods can be overloaded but cannot be overridden
+   because private methods are not inherited.
+
+5. Constructors can be overloaded but cannot be overridden
+   because constructors are not inherited.
+
+6. Variables/fields cannot be overloaded or overridden.
+   If a child class declares a field with the same name,
+   it is called field hiding.
+
+7. Instance methods can be both overloaded and overridden.
+
+8. Abstract methods can be overloaded and overridden.
+
+
+MEMORY TRICK:
+
+Overloading:
+Same name + different parameters.
+
+Overriding:
+Same method signature + parent-child relationship.
+
+
+SHORT RULE:
+
+Methods       -> Can overload and override
+Constructors  -> Can overload, cannot override
+Variables     -> Cannot overload or override
+Static method -> Can overload, cannot override
+Final method  -> Can overload, cannot override
+Private method-> Can overload, cannot override

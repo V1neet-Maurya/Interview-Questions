@@ -333,19 +333,82 @@ Ans. Event capturing is the process where an event travels from the outermost pa
 
 
     
-Q33.
-Ans. 
-Q34.
-Ans. 
-Q35.
-Ans. 
-Q36.
-Ans. 
-Q37.
-Ans. 
-Q38.
-Ans. 
-Q39.
+Q33. What is event delegation in JavaScript?
+Ans. Event delegation means adding one event listener to a parent element instead of adding separate listeners to every child element
+
+    // const list = document.querySelector("#list");
+    // list.addEventListener("click", (event) => {
+    //     console.log(event.target.innerText);
+    // });
+
+
+
+Q34. What is the difference between preventDefault() and stopPropagation() in JavaScript?
+Ans.preventDefault(): Stops the browser's default behavior.
+
+    // link.addEventListener("click", (event) => {
+    //     event.preventDefault();
+    // });
+
+stopPropagation(): Stops the event from propagating to parent/child elements.
+
+    // button.addEventListener("click", (event) => {
+    //     event.stopPropagation();
+    // });
+
+
+
+Q35. What is destructuring in JavaScript?  
+Ans. Destructuring means extracting values from an array or properties from an object and storing them in variables easily.
+
+    // const numbers = [10, 20, 30];
+    // const [a, b, c] = numbers;
+    // console.log(a); // 10
+    // console.log(b); // 20
+
+
+
+Q36. What is the spread operator (...) in JavaScript?
+Ans. The spread operator (...) is used to unpack or expand the elements of an array or properties of an object.
+
+    // const a = [1, 2, 3];
+    // const b = [...a, 4, 5];
+    // console.log(b); // [1, 2, 3, 4, 5]
+
+
+
+Q37. What is the rest operator (...) in JavaScript?
+Ans. The rest operator (...) collects multiple remaining values into a single array or object.
+
+    // function add(...numbers) {
+    //     console.log(numbers);
+    // }
+    // add(10, 20, 30);
+    // // [10, 20, 30]
+    
+    // Spread → unpack / expand
+    // Rest → collect / pack
+
+
+
+Q38. What is the difference between map(), filter(), and reduce() in JavaScript?
+Ans. map() transforms each element and returns a new array, filter() returns elements that satisfy a condition, and reduce() combines the elements into a single result.
+
+map → Transform
+filter → Select
+reduce → Combine
+
+    // const nums = [1, 2, 3, 4];
+    // nums.map(n => n * 2);
+    // // [2, 4, 6, 8]
+    // nums.filter(n => n > 2);
+    // // [3, 4]
+    // nums.reduce((sum, n) => sum + n, 0);
+    // // 10
+
+
+
+Q39. What is the difference between shallow copy and deep copy in JavaScript?
 Ans. 
 Q40.
 Ans. 
