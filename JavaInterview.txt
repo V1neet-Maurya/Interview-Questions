@@ -733,14 +733,107 @@ Ans. Deserialization is the process of converting a byte stream back into an obj
 
 
 Q63. What is the purpose of the transient keyword in Java?
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
+Ans. transient prevents a field from being serialized
+
+    // class User implements Serializable {
+    //     String name;
+    //     transient String password;
+    // }
+
+
+
+Q64. What is the purpose of the static keyword in Java?
+Ans. static means the member belongs to the class rather than to individual objects.
+
+    // class Student {
+    //     static String college = "KIPM";
+    // }
+
+
+
+Q65. Can a static method directly access a non-static variable?
+Ans. No, a static method cannot directly access a non-static variable because the non-static variable belongs to an object, while the static method belongs to the class.
+
+    // class Test {
+    //     int x = 10;          // non-static
+    //     static void show() {
+    //         // System.out.println(x);  ❌
+    //     }
+    // }
+
+    static → class level
+    non-static → object level
+
+
+
+Q66. Can a static method directly access a static variable?
+Ans. Yes, a static method can directly access a static variable because both belong to the class.
+
+    // class Test {
+    //     static int x = 10;
+    // 
+    //     static void show() {
+    //         System.out.println(x); // ✅
+    //     }
+    // }
+
+
+
+Q67. What is the difference between this() and super() in Java?
+Ans. this() → calls another constructor of the same class.
+     super() → calls the constructor of the parent class.
+
+    // class Parent {
+    //     Parent() {
+    //         System.out.println("Parent");
+    //     }
+    // }
+    // 
+    // class Child extends Parent {
+    // 
+    //     Child() {
+    //         super();   // calls Parent constructor
+    //     }
+    //     Child(int x) {
+    //         this();    // calls Child() constructor
+    //     }
+    // } 
+
+
+
+Q68. What is a default constructor in Java?
+Ans. A default constructor is a no-argument constructor automatically provided by the compiler if you don't write any constructor in the class.
+
+    // class Student {
+    //     // Compiler provides a default constructor
+    // }
+    // Student s = new Student();
+
+
+
+Q69. What is a no-argument constructor?
+Ans. A constructor that does not take any parameters is called a no-argument constructor.
+
+    // class Student {
+    //     Student() {
+    //         System.out.println("Hello");
+    //     }
+    // }
+
+
+
+Q70. What is a parameterized constructor?
+Ans. A constructor that accepts one or more parameters is called a parameterized constructor.
+
+    // class Student {
+    //     Student(String name, int age) {
+    //         System.out.println(name + " " + age);
+    //     }
+    // }
+
+
+
+Q71. Can a constructor have a return type like void?
 Ans. 
 Ans. 
 Ans. 

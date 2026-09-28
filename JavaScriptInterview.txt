@@ -409,29 +409,162 @@ reduce → Combine
 
 
 Q39. What is the difference between shallow copy and deep copy in JavaScript?
-Ans. 
-Q40.
-Ans. 
-Q41.
-Ans. 
-Q42.
-Ans. 
-Q43.
-Ans. 
-Q44.
-Ans. 
-Q45.
-Ans. 
-Q46.
-Ans. 
-Q47.
-Ans. 
-Q48.
-Ans. 
-Q49.
-Ans. 
-Q50.
-Ans. 
+Ans. A shallow copy shares references for nested objects, while a deep copy creates independent copies of nested data.
+
+    // //Shallow copy
+    // let a = { user: { name: "Vineet" } };
+    // let b = { ...a };
+    // a.user.name = "Mickey";
+    // console.log(b.user.name); // Mickey
+    // 
+    // //Deep copy
+    // let a = { user: { name: "Vineet" } };
+    // let b = structuredClone(a);
+    // a.user.name = "Mickey";
+    // console.log(b.user.name); // Vineet
+
+
+
+Q40. What is the difference between undefined, null, and NaN in JavaScript?
+Ans. undefined means no value has been assigned, null represents an intentional empty value, and NaN represents an invalid numeric result.
+
+    // //undefined
+    // let a;
+    // console.log(a); // undefined
+    
+    // //null
+    // let user = null;
+    
+    // //NaN
+    // console.log("hello" * 5); // NaN
+
+
+
+Q41. What is the difference between == and ===?
+Ans. == performs type coercion and compares values, while === compares both value and type without type coercion.
+
+
+
+Q42. What is a template literal in JavaScript?
+Ans.  Template literals are strings written using backticks () that allow variable interpolation using ${}` and support multi-line strings.
+
+    // let name = "Vineet";
+    // console.log(`Hello ${name}`);
+
+
+
+Q43. What is type coercion in JavaScript? 
+Ans.  Type coercion is the automatic conversion of one data type into another by JavaScript.
+
+    // let result = 5 + "10";
+    // console.log(result); // "510"
+
+    
+     
+Q44. What is the difference between explicit and implicit type conversion in JavaScript?
+Ans. Explicit conversion is when the programmer manually converts a data type, while implicit conversion is when JavaScript automatically converts it.
+
+    // Explicit
+    // let num = "10";
+    // let result = Number(num);
+    // console.log(result); // 10
+    // 
+    // Implicit
+    // let result = "10" - 5;
+    // console.log(result); // 5
+
+    Explicit = You convert
+    Implicit = JavaScript converts
+
+
+
+Q45. What is NaN in JavaScript?
+Ans. NaN stands for "Not-a-Number" and represents a value that is not a valid numeric result.
+
+    // console.log("hello" * 5); // NaN
+
+
+
+Q46. What is an IIFE in JavaScript?
+Ans. IIFE stands for Immediately Invoked Function Expression.
+    An IIFE is a function that is immediately executed as soon as it is created.
+
+    // (function () {
+    // console.log("Hello");
+    // })();
+
+
+
+Q47. What is a higher-order function in JavaScript?
+Ans. A higher-order function is a function that takes another function as an argument or returns a function
+
+    // function calculate(a, b, operation) {
+    //     return operation(a, b);
+    // }
+    // function add(x, y) {
+    //     return x + y;
+    // }
+    // console.log(calculate(10, 20, add)); // 30
+
+
+
+Q48. What is recursion in JavaScript?
+Ans. Recursion is a technique where a function calls itself repeatedly until a condition, called the base condition, is met.
+
+    // function count(n) {
+    //     if (n === 0) return;
+    //     console.log(n);
+    //     count(n - 1);
+    // }
+    // count(3);
+
+
+
+Q49. What is the difference between for...of and for...in loops in JavaScript?
+Ans. for...of is used to iterate over values, while for...in is used to iterate over keys or indexes.
+
+    // for...of 
+    
+    // let arr = [10, 20, 30];
+    // for (let value of arr) {
+    //     console.log(value);
+    // }
+    // // 10 20 30
+    
+
+    // for...in 
+
+    // let arr = [10, 20, 30];
+    // for (let index in arr) {
+    //     console.log(index);
+    // }
+    // // 0 1 2
+
+
+
+Q50. What is the difference between Object.keys(), Object.values(), and Object.entries()?
+Ans. Object.keys() returns an array of keys, Object.values() returns an array of values, and Object.entries() returns an array containing key-value pairs.
+
+    // const user = {
+    //     name: "Vineet",
+    //     age: 20
+    // };
+    // 
+    // Object.keys(user);
+    // // ["name", "age"]
+    // 
+    // Object.values(user);
+    // // ["Vineet", 20]
+    // 
+    // Object.entries(user);
+    // // [["name", "Vineet"], ["age", 20]]
+
+    keys → keys
+    values → values
+    entries → [key, value]
+
+
+
 Q1.
 Ans. 
 Q1.

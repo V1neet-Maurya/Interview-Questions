@@ -1092,3 +1092,18 @@ Variables     -> Cannot overload or override
 Static method -> Can overload, cannot override
 Final method  -> Can overload, cannot override
 Private method-> Can overload, cannot override
+
+
+
+
+00:00 - Introduction
+00:24 - Why is Java not a 100% purely object-oriented programming language?
+13:33 - Oracle JDK vs OpenJDK | Which one do companies use in production?
+19:05 - Java is platform-independent but JVM is platform-dependent | Explained
+24:04 - Why does Java use both an Interpreter and a JIT Compiler?
+29:41 - Delegation-Parent Principle in Java ClassLoaders and its role in Security
+44:16 - JVM Stack vs Heap Memory | What gets stored where?
+01:02:42 - Method Area vs Metaspace | Java 7 vs Java 8+
+01:11:59 - Reference Counting vs Reachability Analysis | Garbage Collection Explained
+01:22:10 - Is Java Pass-by-Value or Pass-by-Reference?
+01:31:54 - Which Programming Paradigm does Java follow?
