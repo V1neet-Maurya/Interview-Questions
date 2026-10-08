@@ -1096,6 +1096,47 @@ Private method-> Can overload, cannot override
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 00:00 - Introduction
 00:24 - Why is Java not a 100% purely object-oriented programming language?
 13:33 - Oracle JDK vs OpenJDK | Which one do companies use in production?
@@ -1107,3 +1148,44 @@ Private method-> Can overload, cannot override
 01:11:59 - Reference Counting vs Reachability Analysis | Garbage Collection Explained
 01:22:10 - Is Java Pass-by-Value or Pass-by-Reference?
 01:31:54 - Which Programming Paradigm does Java follow?
+
+
+✔ Traversal (Array, String, Linked List) & Sorting
+✔ Two Pointers
+✔ Sliding Window
+✔ Fast & Slow Pointers
+✔ Prefix Sum
+✔ Frequency Counting (HashMap)
+✔ Seen / Existence Check (HashSet)
+✔ Tree Traversal (DFS & BFS)
+✔ Basic Recursion
+✔ Greedy & Dynamic Programming (DP)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

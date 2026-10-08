@@ -834,16 +834,110 @@ Ans. A constructor that accepts one or more parameters is called a parameterized
 
 
 Q71. Can a constructor have a return type like void?
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
-Ans. 
+Ans. A constructor cannot have a return type, not even void.
+
+
+
+Q72. Can a constructor be private?
+Ans. A private constructor prevents classes outside the class from directly creating its objects.
+
+    // class Student {
+    // 
+    //     private Student() {
+    //         System.out.println("Private constructor");
+    //     }
+    // }
+
+
+
+Q73. What is the Singleton class in Java?
+Ans. A Singleton class is a class that allows only one object (instance) to be created throughout the application.
+
+    // class Singleton {
+    // 
+    //     private static Singleton obj = new Singleton();
+    // 
+    //     private Singleton() {
+    //     }
+    // 
+    //     public static Singleton getInstance() {
+    //         return obj;
+    //     }
+    // }
+
+
+
+Q74. What is an immutable class in Java?
+Ans. An immutable class is a class whose object state cannot be changed after the object is created.
+
+    // String s = "Java";
+    // s = "Python";
+
+
+
+Q75. What are the main rules to create an immutable class in Java?
+Ans. Main rules of an Immutable Class
+1. Make the class final → so nobody can extend it.
+2. Make variables private and final → so they cannot be changed directly.
+3. Initialize variables through the constructor.
+4. Don't provide setter methods → no way to change the data.
+
+    // final class Student {
+    // 
+    //     private final String name;
+    // 
+    //     Student(String name) {
+    //         this.name = name;
+    //     }
+    // 
+    //     public String getName() {
+    //         return name;
+    //     }
+    // }
+
+
+
+Q76. What is the difference between ArrayList and Vector?
+Ans. ArrayList: Uses a dynamic array internally and is not synchronized.
+     Vector: Uses a dynamic array internally and is synchronized.
+
+     LinkedList → nodes + references
+     ArrayList → dynamic array
+     Vector → dynamic array + synchronized
+
+
+
+Q77. What is multithreading in Java?
+Ans. Multithreading is the process of executing multiple threads concurrently within a program.
+
+
+
+Q78. What is a thread in Java?
+Ans. A thread is a small unit of execution within a program that performs a specific task.
+
+
+
+Q79. What are the two common ways to create a thread in Java?
+Ans. Two common ways to create a thread:
+1. Extend the Thread class
+2. Implement the Runnable interface
+
+
+
+Q80. What is the difference between start() and run() in a thread?
+Ans. start() → starts a new thread and then calls run() internally.
+run() → contains the task/code that the thread should execute. Calling it directly does NOT create a new thread
+
+    // class MyThread extends Thread {
+    // 
+    //     public void run() {
+    //         System.out.println("Task running");
+    //     }
+    // }
+    // 
+    // MyThread t = new MyThread();
+    // 
+    // t.start();  // ✅ Creates a new thread
 Ans. 
 Ans. 
 Ans. 

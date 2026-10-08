@@ -565,7 +565,114 @@ Ans. Object.keys() returns an array of keys, Object.values() returns an array of
 
 
 
-Q1.
+Q51. What is the difference between Object.freeze() and Object.seal() in JavaScript?
+Ans. Object.freeze() completely prevents changes to an object, while Object.seal() prevents adding or deleting properties but allows modifying existing properties.
+
+    // const user = {
+    //     name: "Vineet"
+    // };
+    // 
+    // Object.freeze(user);
+    // // user.name = "Mickey"; ❌
+    // 
+    // Object.seal(user);
+    // // user.name = "Mickey"; ✅
+
+
+
+Q52. What is the difference between prototype and __proto__ in JavaScript?
+Ans. prototype is a property of constructor functions used for inheritance, while __proto__ is the reference through which an object accesses its prototype.
+
+
+
+Q53. What is prototypal inheritance in JavaScript?
+Ans. Prototypal inheritance is a mechanism where an object can inherit properties and methods from another object through the prototype chain.
+
+    // const person = {
+    //     greet() {
+    //         console.log("Hello");
+    //     }
+    // };
+    // 
+    // const user = Object.create(person);
+    // 
+    // user.greet(); // Hello
+
+
+
+Q54. What is the difference between let, const, and var in terms of scope?
+Ans. var → function-scoped
+let → block-scoped
+const → block-scoped
+
+    // if (true) {
+    //     var a = 10;
+    //     let b = 20;
+    //     const c = 30;
+    // }
+    // 
+    // console.log(a); // 10 ✅
+    // console.log(b); // Error ❌
+    // console.log(c); // Error ❌
+
+
+
+Q55. What is the Temporal Dead Zone (TDZ) in JavaScript?
+Ans. The Temporal Dead Zone is the period between entering a block and the actual declaration of a let or const variable, during which the variable cannot be accessed.
+
+    // console.log(x); // ❌ ReferenceError
+    // let x = 10;
+
+
+
+Q56. What is strict mode in JavaScript?
+Ans. Strict mode is a JavaScript feature that enforces stricter rules and helps detect common coding errors.
+
+    // "use strict";
+
+
+
+Q57. What is the difference between function and arrow functions regarding the this keyword?
+Ans. In a normal function, this depends on how the function is called, while an arrow function does not have its own this and inherits it from the surrounding scope.
+
+    // const user = {
+    //     name: "Vineet",
+    //     greet: function() {
+    //         console.log(this.name);
+    //     }
+    // };
+    // 
+    // user.greet(); // Vineet
+
+
+
+Q58.What is the difference between synchronous and asynchronous JavaScript?
+Ans. Synchronous code executes tasks one by one and waits for each task to finish, while asynchronous code allows other tasks to execute while waiting for an asynchronous operation.
+
+    // console.log("1");
+    // 
+    // setTimeout(() => {
+    //     console.log("2");
+    // }, 2000);
+
+    // console.log("3");
+
+
+
+Q59.What is callback hell in JavaScript?
+Ans.Callback hell is a situation where multiple nested callbacks make asynchronous code difficult to read, understand, and maintain.
+
+
+
+Q60.What is JSON in JavaScript?
+Ans. JSON is a lightweight text-based format used to represent and exchange structured data between applications.
+
+    // {
+    //     "name": "Vineet",
+    //     "age": 20,
+    //     "skills": ["Java", "JavaScript"]
+    // }
+Q61.
 Ans. 
 Q1.
 Ans. 
